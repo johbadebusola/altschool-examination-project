@@ -146,11 +146,14 @@ margin: auto;
   
 }
 
-/* Error boundry */
-.error-boundary{
-  color:purple;
+.errorMessage{
+  color: red;
+  font-size:3vw;
   text-align: center;
- 
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 90vh;
 }
 
 @media (min-width:600px) {

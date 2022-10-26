@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Userdata from "./Userdata";
 import "./index.css"
 import { Pagination } from "antd";
+import ErrorBoundary from "./ErrorBoundry";
 const User = () => {
     const [data, setData] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
@@ -12,7 +13,7 @@ const User = () => {
 
     async function getData() {
 
-        const response = await fetch("https://randomuser.me/api/?results=200")
+        const response = await fetch("https://randomuser.me/api/?page=10&results=100&seed=abc")
         const result = await response.json()
         return result
     }
@@ -23,8 +24,8 @@ const User = () => {
                 setData(result.results)
             })
             .catch((error) => {
-                setLoading(false)
-                setError("No internet connection")
+                setLoading(true)
+                setError(<h3 className="errorMessage" >No internet connection </h3>)
             }
             )
     }, [])
@@ -49,11 +50,13 @@ const User = () => {
     
     return (
         <div>
-           
-            <Userdata data={currentPost} loading={loading} error ={error} />
+           <ErrorBoundary>
+           <Userdata data={currentPost} loading={loading} error ={error} />
             <div className="pagination">
             <Pagination current={currentPage} onChange={(value) =>setCurrentPage(value) } total={data.length} itemRender={itemRender}  />
             </div>
+           </ErrorBoundary>
+        
           <div className="space"> </div>
         </div>
     )
