@@ -1,5 +1,5 @@
 import React from 'react'
-
+import ErrorBoundry from './ErrorBoundry';
 import "./index.css"
 function Userdata({data,loading,error}) {
 
@@ -29,7 +29,12 @@ function Userdata({data,loading,error}) {
      
      loading ?  (<div className='all'>{userId}  </div> ) : (<h1 className='load'> Loading......</h1>)
    }
-  <h1>{error} </h1>
+   <ErrorBoundry>
+   <h1>{error} </h1>
+    </ErrorBoundry>
+
+
+s
 
  
    
