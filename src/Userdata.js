@@ -32,11 +32,6 @@ function Userdata({data,loading,error}) {
    <ErrorBoundry>
    <h1>{error} </h1>
     </ErrorBoundry>
-
-
-s
-
- 
    
     </>
   )
