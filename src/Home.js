@@ -17,9 +17,13 @@ const [name,setName] = useState("user")
       const token = credential.accessToken;
       // The signed-in user info.
       const user = result.user;
+      let name = user.displayName
+      const profilePics = user.photoURL
       console.log(user.email )
       console.log(user.displayName)
       setName(user)
+      localStorage.setItem("name",name )
+      localStorage.setItem("picture",profilePics)
       // ...
     }).catch((error) => {
       // Handle Errors here.
@@ -31,16 +35,18 @@ const [name,setName] = useState("user")
       const credential = GoogleAuthProvider.credentialFromError(error);
       // ...
     });
+
   } 
+
   console.log(name.email)
   return (
     <>
-    <div>
-      <button onClick={signIn} >
-        Sign in with google
-      </button>
+    
+    <div className='googleUser'>
+    <h5 className='googleUserName'> {localStorage.getItem("name")} </h5>
+    <img className='googleUserPicture' src={localStorage.getItem("picture")} alt="userPics" />
     </div>
-    <h5> Hi, {name.displayName} </h5>
+    
     <h4 className='home-head'> Click on the user tab to view the list of people who uses our service.</h4>
    <div className='home-img'>
     <div>
@@ -74,7 +80,15 @@ const [name,setName] = useState("user")
     </div>
 
    </div>
+   <hr className='hr'></hr>
+   <div className='signInBackground'>
+   <p> Sign in With</p>
+     
+    </div>
   
+    <button className='signInButton' onClick={signIn} >
+       google
+      </button>
    </>
   )
 }

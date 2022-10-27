@@ -168,6 +168,43 @@ margin: auto;
   min-height: 90vh;
 }
 
+/* Google authentication user name and picture */
+.googleUser{
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+}
+
+.googleUserName{
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 700px;
+}
+.googleUserPicture{
+  border-radius: 50%;
+  width: 30px;
+  margin-left: 1em;
+}
+
+.hr{
+  border: 1px solid rebeccapurple;
+
+}
+
+.signInBackground{
+background-color: white;
+text-align: center;
+margin: auto;
+width: 25%;
+margin-top: -1.5em;
+
+}
+
+.signInButton{
+  margin: auto;
+  display: block;
+ 
+}
+
 @media (min-width:600px) {
   .user-container {
     display: grid;

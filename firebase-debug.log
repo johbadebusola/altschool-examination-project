@@ -1,0 +1,102 @@
+[debug] [2022-10-27T11:35:20.683Z] ----------------------------------------------------------------------
+[debug] [2022-10-27T11:35:20.688Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Toyin Aebusola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-10-27T11:35:20.689Z] CLI Version:   11.15.0
+[debug] [2022-10-27T11:35:20.690Z] Platform:      win32
+[debug] [2022-10-27T11:35:20.690Z] Node Version:  v16.17.1
+[debug] [2022-10-27T11:35:20.693Z] Time:          Thu Oct 27 2022 12:35:20 GMT+0100 (West Africa Standard Time)
+[debug] [2022-10-27T11:35:20.693Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-27T11:35:20.845Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-27T11:35:20.846Z] > authorizing via signed-in user (johntoyin97@gmail.com)
+[debug] [2022-10-27T11:35:20.846Z] [iam] checking project userxifyy for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-27T11:35:20.849Z] > refreshing access token with scopes: []
+[debug] [2022-10-27T11:35:20.853Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-27T11:35:20.853Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-27T11:35:31.217Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-10-27T11:35:31.220Z] > refreshing access token with scopes: []
+[debug] [2022-10-27T11:35:31.222Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-27T11:35:31.222Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-27T11:35:41.444Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-10-27T11:35:46.463Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Toyin Aebusola\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-10-27T11:36:10.355Z] ----------------------------------------------------------------------
+[debug] [2022-10-27T11:36:10.358Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Toyin Aebusola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-10-27T11:36:10.359Z] CLI Version:   11.15.0
+[debug] [2022-10-27T11:36:10.359Z] Platform:      win32
+[debug] [2022-10-27T11:36:10.359Z] Node Version:  v16.17.1
+[debug] [2022-10-27T11:36:10.360Z] Time:          Thu Oct 27 2022 12:36:10 GMT+0100 (West Africa Standard Time)
+[debug] [2022-10-27T11:36:10.361Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-27T11:36:10.503Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-27T11:36:10.504Z] > authorizing via signed-in user (johntoyin97@gmail.com)
+[debug] [2022-10-27T11:36:10.504Z] [iam] checking project userxifyy for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-27T11:36:10.507Z] > refreshing access token with scopes: []
+[debug] [2022-10-27T11:36:10.511Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-27T11:36:10.512Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-27T11:36:20.831Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-10-27T11:36:20.832Z] > refreshing access token with scopes: []
+[debug] [2022-10-27T11:36:20.832Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-27T11:36:20.833Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-27T11:36:31.160Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2022-10-27T11:36:36.175Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Toyin Aebusola\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-10-27T11:37:03.191Z] ----------------------------------------------------------------------
+[debug] [2022-10-27T11:37:03.195Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Toyin Aebusola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2022-10-27T11:37:03.196Z] CLI Version:   11.15.0
+[debug] [2022-10-27T11:37:03.196Z] Platform:      win32
+[debug] [2022-10-27T11:37:03.196Z] Node Version:  v16.17.1
+[debug] [2022-10-27T11:37:03.197Z] Time:          Thu Oct 27 2022 12:37:03 GMT+0100 (West Africa Standard Time)
+[debug] [2022-10-27T11:37:03.198Z] ----------------------------------------------------------------------
+[debug] 
+[info] Already logged in as johntoyin97@gmail.com
+[debug] [2022-10-27T11:37:13.390Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Toyin Aebusola\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2022-10-27T11:37:46.962Z] ----------------------------------------------------------------------
+[debug] [2022-10-27T11:37:46.966Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Toyin Aebusola\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-10-27T11:37:46.967Z] CLI Version:   11.15.0
+[debug] [2022-10-27T11:37:46.967Z] Platform:      win32
+[debug] [2022-10-27T11:37:46.968Z] Node Version:  v16.17.1
+[debug] [2022-10-27T11:37:46.968Z] Time:          Thu Oct 27 2022 12:37:46 GMT+0100 (West Africa Standard Time)
+[debug] [2022-10-27T11:37:46.969Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-27T11:37:47.106Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-27T11:37:47.107Z] > authorizing via signed-in user (johntoyin97@gmail.com)
+[debug] [2022-10-27T11:37:47.107Z] [iam] checking project userxifyy for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-27T11:37:47.112Z] > refreshing access token with scopes: []
+[debug] [2022-10-27T11:37:47.116Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-27T11:37:47.117Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-27T11:37:48.081Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-10-27T11:37:48.081Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-27T11:37:48.135Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/userxifyy:testIamPermissions [none]
+[debug] [2022-10-27T11:37:48.136Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/userxifyy:testIamPermissions x-goog-quota-user=projects/userxifyy
+[debug] [2022-10-27T11:37:48.136Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/userxifyy:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-27T11:37:49.397Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/userxifyy:testIamPermissions 200
+[debug] [2022-10-27T11:37:49.397Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/userxifyy:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-27T11:37:49.399Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/userxifyy [none]
+[debug] [2022-10-27T11:38:19.416Z] Timeout reached making request to https://firebase.googleapis.com/v1beta1/projects/userxifyy
+[debug] [2022-10-27T11:38:24.429Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Toyin Aebusola\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
