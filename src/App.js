@@ -5,18 +5,15 @@ import './App.css';
 import ErrorBoundry from './ErrorBoundry';
 import { signInWithGoogle, GoogleAuthProvider } from "./firebase"
 import "./index.css"
-import person1 from "./person1.jpg"
-import person2 from "./person2.jpg"
-import person3 from "./person3.jpg"
+import back1 from "./back1.svg"
+import googleIcon from "./googleicon.png"
+import logout from "./logout.png"
+import Homes from "./Home.png"
 import User from './User'
 import Home from './Home'
 import ErrorPage from './ErrorPage'
 import "./index.css"
-import 'swiper/css'
-import { Pagination } from 'swiper';
-import 'swiper/css/pagination';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 function App() {
   const [signedIn, setSignedIn] = useState(true)
@@ -89,10 +86,10 @@ function App() {
         <nav className='nav'>
 
           <ul>
-            <li> <Link to="/">HOME</Link> </li>
-            <li> <Link to="user" > USER </Link> </li>
+            <li> <Link to="/"><img className='nav-img' src={Homes} alt="logout"/></Link> </li>
+            <li>  <Link to="user" > USER </Link> </li>
             <li onClick={signOut}>
-              <a href='#'>  Sign Out </a>
+              <a href='#'>  <img className='nav-img' src={logout} alt="logout"/> </a>
             </li>
           </ul>
         </nav>
@@ -109,44 +106,23 @@ function App() {
   } else {
     return (
       < >
-        <div className='signInWrapper'>
-          <h2 >Userxiffy</h2>
+      <div className='signin-grid'>
+<div className='signin-grid1'>
+<img src={back1} alt="welcome" />
 
-          <Swiper className='swiper1'
-            modules={[Pagination]}
-            spaceBetween={2}
-            slidesPerView={1}
-            pagination={{ clickable: true }}
-       
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
-          >
-            <SwiperSlide className='slider'>
-              <div className='slider-wrapper'>
-                <img src={person1} alt="welcome" />
-              </div>
-
-            </SwiperSlide>
-            <SwiperSlide className='slider'>
-              <div className='slider-wrapper'>
-              <img src={person2} alt="welcome" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className='slider'>
-            <div className='slider-wrapper'>
-              <img src={person3} alt="welcome" />
-              </div>
-            </SwiperSlide>
+</div>
 
 
-          </Swiper>
+<div className='signin-grid2'>
 
-          <div className='signIn-cont'>
-            <button className='signInButton' onClick={signIn} >
-              Sign in with google
-            </button>
-          </div>
-        </div>
+              <h3> WELCOME </h3>
+              <p> To keep connected with us please sign in with google</p>
+              <button className='signInButton' onClick={signIn} >
+              <img src={googleIcon} />
+              </button>
+        
+</div>
+      </div>
 
       </>
     )
@@ -155,3 +131,4 @@ function App() {
 }
 
 export default App;
+

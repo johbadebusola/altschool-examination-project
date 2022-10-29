@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 .nav ul {
   list-style: none;
   padding: 0;
@@ -205,16 +205,10 @@
 
 /* Sign in page */
 
-
-.signInButton {
-  margin: auto;
-  display: block;
-
-}
-
-.signInWrapper{
+.signInWrapper {
   background-image: url("background1.jpg");
-  object-fit: fill;
+ object-fit: cover;
+  height: 100vh;
 }
 
 .signInWrapper>h2 {
@@ -239,35 +233,9 @@
   padding: 5px;
 }
 
-.signIn-cont {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 94vh;
-  flex-direction: column;
-
-}
 
 
 
-
-
-/* Home banner */
-
-/* .banner {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-
-.banner>.emailId {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
- */
 
 .banner>.emailId>img {
   border-radius: 50%;
@@ -310,16 +278,77 @@
   color: rebeccapurple;
 }
 
+
+/* Grid */
+
+.signin-grid{
+  display: grid;
+  grid-template-columns: 1fr ;
+  width: 100%;
+  height: 100vh;
+ 
+}
+
+.signin-grid1{
+
+ border-bottom:2px solid black ;
+}
+
+.signin-grid1 > img{
+  width: 100%;
+  height: 100%;
+}
+
+.signin-grid2{
+  background-color: goldenrod;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+text-align: center;
+}
+
+.signin-grid2 > h3{
+  font-family: 'Satisfy', cursive;
+  font-size: 2em;
+  font-weight: bolder;
+  color: white;
+}
+
+.signin-grid2 > p{
+  font-family: 'Satisfy', cursive;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-img{
+  width: 25px;
+}
+
 @media (min-width:600px) {
+  .signin-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    width: 100%;
+    height: 100vh;
+ 
+  }
+ 
+
+  .signin-grid1{
+    border-right:2px solid black ;
+    border-bottom:none ;
+   }
 
   .banner {
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-   margin-left: 2em;
-   margin-right: 2em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2em;
+    margin-right: 2em;
   }
 
   .banner>h2 {
@@ -345,34 +374,9 @@
     grid-gap: 2em;
   }
 
-  .signIn-cont {
+ 
 
-    flex-direction: row;
-  }
-
-  .signIn-cont>img {
-    width: 70%;
-
-  }
 }
-
-@media (min-width:1121px) {
-
-  .signIn-cont>img {
-    width: 60%;
-
-  }
-}
-
-@media (min-width:1300px) {
-
-  .signIn-cont>img {
-    width: 50%;
-    margin-top: 1em;
-    margin-left: 3em;
-  }
-}
-
 
 
 @media (max-width:400px) {
@@ -381,41 +385,10 @@
     position: fixed;
     bottom: -1em;
     width: 100%;
-   
+
   }
 
-.home-img{
- margin-bottom: 3em;
-}
-}
-
-
-.swiper1{
- 
-  height: 460px;
- 
-}
-
- .slider {
-display: flex;
-justify-content: center;
-align-items: center;
-
-
-}
-
-.slider-wrapper{
-  background-color: #4C8BF5;
-  width: 100%;
-  margin: 1em;
-  height: 400px;
-  border-radius: 10px;
-}
-
-.slider-wrapper>img {
- width: 100%;
- height: 100%;
-object-fit: cover;
-object-position: right;
-border-radius: 10px;
+  .home-img {
+    margin-bottom: 3em;
+  }
 }
