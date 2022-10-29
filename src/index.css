@@ -76,7 +76,7 @@
   padding: 0;
   margin: 0;
   justify-content: center;
-   align-items: center;
+  align-items: center;
 }
 
 .paginateNav ul li {
@@ -88,8 +88,8 @@
   text-decoration: none;
   padding: 9px;
   font-weight: bolder;
- display: block;
-text-align: center;
+  display: block;
+  text-align: center;
 
 }
 
@@ -98,10 +98,10 @@ text-align: center;
   color: white;
 }
 
-.contact-cont{
-text-align: center;
-margin: auto;
-  border:1px solid rebeccapurple ;
+.contact-cont {
+  text-align: center;
+  margin: auto;
+  border: 1px solid rebeccapurple;
   width: 300px;
   color: rebeccapurple;
   font-weight: bold;
@@ -109,26 +109,27 @@ margin: auto;
 
 /* HOME PAGE */
 
-.home-head{
-  color: rebeccapurple ;
+.home-head {
+  color: rebeccapurple;
   font-weight: bolder;
   margin-bottom: -2em;
   font-family: 'Source Serif Pro', serif;
   text-align: center;
 }
-.home-img{
- 
+
+.home-img {
+
   margin: 2em;
 }
 
-.home-p{
+.home-p {
   font-family: 'Source Serif Pro', serif;
   font-weight: bolder;
   margin-top: 1em;
-  color: rebeccapurple ;
+  color: rebeccapurple;
 }
 
-.img1{
+.img1 {
   width: 100%;
   height: 40vh;
   border: 2px solid rebeccapurple;
@@ -138,7 +139,7 @@ margin: auto;
   border-bottom-left-radius: 20px;
 }
 
-.load{
+.load {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,74 +147,275 @@ margin: auto;
   min-height: 90vh;
 }
 
-.space{
+.space {
   margin-top: 2em;
   width: 100%;
   border: 1px solid salmon;
 }
-.pagination{
- 
+
+.pagination {
+
   display: flex;
   justify-content: center;
-  
+
 }
 
-.errorMessage{
+.errorMessage {
   color: red;
-  font-size:3vw;
+  font-size: 3vw;
   text-align: center;
   justify-content: center;
   align-items: center;
   display: flex;
-  min-height: 90vh;
+  min-height: 78vh;
 }
 
 /* Google authentication user name and picture */
-.googleUser{
- display: flex;
- justify-content: flex-end;
- align-items: center;
+.googleUser {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.googleUserName{
+.googleUserName {
   font-family: 'Source Serif Pro', serif;
   font-weight: 700px;
 }
-.googleUserPicture{
+
+.googleUserPicture {
   border-radius: 50%;
   width: 30px;
   margin-left: 1em;
 }
 
-.hr{
+.hr {
   border: 1px solid rebeccapurple;
 
 }
 
-.signInBackground{
-background-color: white;
-text-align: center;
-margin: auto;
-width: 25%;
-margin-top: -1.5em;
+.signInBackground {
+  background-color: white;
+  text-align: center;
+  margin: auto;
+  width: 25%;
+  margin-top: -1.5em;
 
 }
 
-.signInButton{
+
+/* Sign in page */
+
+
+.signInButton {
   margin: auto;
   display: block;
- 
+
+}
+
+.signInWrapper{
+  background-image: url("background1.jpg");
+  object-fit: fill;
+}
+
+.signInWrapper>h2 {
+  color: rebeccapurple;
+}
+
+.signInButton {
+  background-color: black;
+  color: white;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 1em;
+  padding: 3px;
+  font-weight: bold;
+}
+
+.signInButton:hover {
+  background-color: white;
+  color: #4C8BF5;
+  border: 2px solid #4C8BF5;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.signIn-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 94vh;
+  flex-direction: column;
+
+}
+
+
+
+
+
+/* Home banner */
+
+/* .banner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.banner>.emailId {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ */
+
+.banner>.emailId>img {
+  border-radius: 50%;
+  width: 30px;
+  margin-left: 1em;
+}
+
+.banner>.emailId>p {
+  color: #4C8BF5;
+  font-weight: bolder;
+  font-family: 'Source Serif Pro', serif;
+  margin-top: 1em;
+}
+
+.banner {
+  margin-left: 1em;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.banner>.emailId {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.banner>h2 {
+  display: none;
+}
+
+.banner>button {
+  color: white;
+  font-weight: bold;
+  background-color: rebeccapurple;
+}
+
+.banner>h2 {
+  color: rebeccapurple;
 }
 
 @media (min-width:600px) {
+
+  .banner {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+   margin-left: 2em;
+   margin-right: 2em;
+  }
+
+  .banner>h2 {
+    display: block;
+  }
+
+
+  .banner>.emailId {
+
+    justify-content: start;
+    align-items: center;
+
+  }
+
   .user-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
-  .home-img{
+  .home-img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2em;
   }
+
+  .signIn-cont {
+
+    flex-direction: row;
+  }
+
+  .signIn-cont>img {
+    width: 70%;
+
+  }
+}
+
+@media (min-width:1121px) {
+
+  .signIn-cont>img {
+    width: 60%;
+
+  }
+}
+
+@media (min-width:1300px) {
+
+  .signIn-cont>img {
+    width: 50%;
+    margin-top: 1em;
+    margin-left: 3em;
+  }
+}
+
+
+
+@media (max-width:400px) {
+
+  .nav {
+    position: fixed;
+    bottom: -1em;
+    width: 100%;
+   
+  }
+
+.home-img{
+ margin-bottom: 3em;
+}
+}
+
+
+.swiper1{
+ 
+  height: 460px;
+ 
+}
+
+ .slider {
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+
+.slider-wrapper{
+  background-color: #4C8BF5;
+  width: 100%;
+  margin: 1em;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.slider-wrapper>img {
+ width: 100%;
+ height: 100%;
+object-fit: cover;
+object-position: right;
+border-radius: 10px;
 }

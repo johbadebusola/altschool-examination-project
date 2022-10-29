@@ -58,6 +58,7 @@ const User = () => {
            </ErrorBoundary>
         
           <div className="space"> </div>
+          <hr />
         </div>
     )
 }
