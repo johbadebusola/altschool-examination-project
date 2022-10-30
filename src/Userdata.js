@@ -27,7 +27,7 @@ function Userdata({data,loading,error}) {
 
     {
      
-     loading ?  (<div className='all'>{userId}  </div> ) : (<h1 className='load'> Loading......</h1>)
+     loading ?  (<div className='all'>{userId}  </div> ) : (<div className='loader-wrapper'><div class="loader"></div> </div>)
    }
    <ErrorBoundry>
    <h1>{error} </h1>
