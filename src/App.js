@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import { signOutOfGoogle, auth } from "./firebase"
 import './App.css';
-import ErrorBoundry from './ErrorBoundry';
+import TestErrorBoundry from './TestErrorBoundry';
+import ErrorBoundary from './ErrorBoundry';
 import { signInWithGoogle, GoogleAuthProvider } from "./firebase"
 import "./index.css"
 import back1 from "./back1.svg"
@@ -72,58 +73,62 @@ function App() {
     return (
 
       < >
-        <div className='banner'>
-          <h2 >Userxiffy</h2>
-          <div className='emailId'>
-            <p> Hi, {name.displayName} </p>
-            <img src={image} alt="img" />
+        <ErrorBoundary>
+          <div className='banner'>
+            <h2 >Userxiffy</h2>
+            <div className='emailId'>
+              <p> Hi, {name.displayName} </p>
+              <img src={image} alt="img" />
+            </div>
+
+
+
           </div>
 
+          <nav className='nav'>
 
+            <ul>
+              <li> <Link to="/"><img className='nav-img' src={Homes} alt="logout" /></Link> </li>
+              <li className='user'>  <Link to="user" > USER </Link> </li>
+              <li onClick={signOut}>
+                <a href='#'>  <img className='nav-img' src={logout} alt="logout" /> </a>
+              </li>
+            </ul>
+          </nav>
 
-        </div>
-
-        <nav className='nav'>
-
-          <ul>
-            <li> <Link to="/"><img className='nav-img' src={Homes} alt="logout"/></Link> </li>
-            <li>  <Link to="user" > USER </Link> </li>
-            <li onClick={signOut}>
-              <a href='#'>  <img className='nav-img' src={logout} alt="logout"/> </a>
-            </li>
-          </ul>
-        </nav>
-
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='user' element={<User />} />
-          <Route path='*' element={<ErrorPage />} />
-        </Routes>
-
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='user' element={<User />} />
+            <Route path='errorboundry' element={< TestErrorBoundry />} />
+            <Route path='*' element={<ErrorPage />} />
+          </Routes>
+        </ErrorBoundary>
 
       </>
     )
   } else {
+
     return (
       < >
-      <div className='signin-grid'>
-<div className='signin-grid1'>
-<img src={back1} alt="welcome" />
+        <ErrorBoundary>
+          <div className='signin-grid'>
+            <div className='signin-grid1'>
+              <img src={back1} alt="welcome" />
 
-</div>
+            </div>
 
 
-<div className='signin-grid2'>
+            <div className='signin-grid2'>
 
               <h3> WELCOME </h3>
               <p> To keep connected with us please sign in with google</p>
               <button className='signInButton' onClick={signIn} >
-              <img src={googleIcon} />
+                <img src={googleIcon} alt="google" /> --
               </button>
-        
-</div>
-      </div>
 
+            </div>
+          </div>
+        </ErrorBoundary>
       </>
     )
   }

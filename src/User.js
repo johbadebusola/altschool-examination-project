@@ -50,12 +50,12 @@ const User = () => {
     
     return (
         <div>
-           <ErrorBoundary>
+          
            <Userdata data={currentPost} loading={loading} error ={error} />
             <div className="pagination">
             <Pagination current={currentPage} onChange={(value) =>setCurrentPage(value) } total={data.length} itemRender={itemRender}  />
             </div>
-           </ErrorBoundary>
+          
         
           <div className="space"> </div>
           <hr />

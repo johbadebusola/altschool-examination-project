@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
 .nav ul {
   list-style: none;
   padding: 0;
@@ -139,13 +140,6 @@
   border-bottom-left-radius: 20px;
 }
 
-.load {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: red;
-  min-height: 90vh;
-}
 
 .space {
   margin-top: 2em;
@@ -207,7 +201,7 @@
 
 .signInWrapper {
   background-image: url("background1.jpg");
- object-fit: cover;
+  object-fit: cover;
   height: 100vh;
 }
 
@@ -281,65 +275,65 @@
 
 /* Grid */
 
-.signin-grid{
+.signin-grid {
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   width: 100%;
   height: 100vh;
- 
+
 }
 
-.signin-grid1{
+.signin-grid1 {
 
- border-bottom:2px solid black ;
+  border-bottom: 2px solid black;
 }
 
-.signin-grid1 > img{
+.signin-grid1>img {
   width: 100%;
   height: 100%;
 }
 
-.signin-grid2{
+.signin-grid2 {
   background-color: goldenrod;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-text-align: center;
+  text-align: center;
 }
 
-.signin-grid2 > h3{
+.signin-grid2>h3 {
   font-family: 'Satisfy', cursive;
   font-size: 2em;
   font-weight: bolder;
-  color: white;
+  color: #212121;
 }
 
-.signin-grid2 > p{
+.signin-grid2>p {
   font-family: 'Satisfy', cursive;
-  color: white;
+  color: #212121;
   font-size: 1.5em;
   font-weight: bold;
 }
 
-.nav-img{
+.nav-img {
   width: 25px;
 }
 
 @media (min-width:600px) {
-  .signin-grid{
+  .signin-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
     height: 100vh;
- 
-  }
- 
 
-  .signin-grid1{
-    border-right:2px solid black ;
-    border-bottom:none ;
-   }
+  }
+
+
+  .signin-grid1 {
+    border-right: 2px solid black;
+    border-bottom: none;
+  }
 
   .banner {
 
@@ -374,7 +368,7 @@ text-align: center;
     grid-gap: 2em;
   }
 
- 
+
 
 }
 
@@ -394,7 +388,7 @@ text-align: center;
 }
 
 /* LOADER CSS */
-.loader-wrapper{
+.loader-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -402,7 +396,7 @@ text-align: center;
 }
 
 .loader {
-  
+
   margin: auto;
   border: 20px solid #EAF0F6;
   border-radius: 50%;
@@ -413,6 +407,34 @@ text-align: center;
 }
 
 @keyframes spinner {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.user {
+  margin-top: 0.1em;
+}
+
+/* Error boundary test */
+.errorTestcontainer {
+  flex-direction: column;
+  font-family: 'Source Serif Pro', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  font-weight: bold;
+}
+
+.errorTest {
+  margin-left: 1em;
+  margin-bottom: 1em;
+  font-family: 'Source Serif Pro', serif;
+  border: 2px solid rebeccapurple;
+  font-weight: bold;
 }

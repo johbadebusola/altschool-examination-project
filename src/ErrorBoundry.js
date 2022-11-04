@@ -1,4 +1,5 @@
 import {React, Component} from "react"
+
 class ErrorBoundary extends Component {
     constructor(props) {
       super(props);
@@ -15,15 +16,22 @@ class ErrorBoundary extends Component {
 console.log(error, errorInfo);
     }
   
+    
     render() {
+ 
+
       if (this.state.error) {
        
         return (
+          
           <>
           <div style={{color:"red",textAlign:"center",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",minHeight:"100vh"}}>
           <h1 style={{color:"red"}}>Something went wrong </h1>
          <p style={{color:"black"}}> Fixing bugs, please bear with us </p>
+
+        
           </div>
+
          
           </>
        

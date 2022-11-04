@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import img2 from "./img2.svg"
 import img3 from "./img3.svg"
 import img4 from "./img4.svg"
@@ -8,14 +9,16 @@ import img7 from "./img7.svg"
 import "./index.css"
 
 const Home = () => {
+const navigate = useNavigate()
 
+const test = () =>{
+navigate("/errorboundry")
 
+}
   return (
     <>
-
-   
-
-      <h4 className='home-head'> Click on the user tab to view the list of people who uses our service.</h4>
+<button className='errorTest' onClick={test} > Click to test Error boundry </button>
+      <h4 className='home-head'> Click on the user tab to view the list of people who use our service.</h4>
       <div className='home-img'>
         <div>
           <img className='img1' src={img7} alt="person1" />
@@ -49,7 +52,8 @@ const Home = () => {
 
       </div>
       <hr />
-
+  
+      
     </>
   )
 }
