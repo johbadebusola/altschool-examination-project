@@ -18,7 +18,7 @@ navigate("/errorboundry")
   return (
     <>
 <button className='errorTest' onClick={test} > Click to test Error boundry </button>
-      <h4 className='home-head'> Click on the user tab to view the list of people who use our service.</h4>
+      <p className='home-head'> Click on the user tab to view the list of people who use our service.</p>
       <div className='home-img'>
         <div>
           <img className='img1' src={img7} alt="person1" />

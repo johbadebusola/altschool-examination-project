@@ -18,8 +18,6 @@ import "./index.css"
 
 function App() {
   const [signedIn, setSignedIn] = useState(true)
-  const [name, setName] = useState("user")
-  const [image, setImage] = useState()
   const signIn = () => {
     signInWithGoogle()
       .then((result) => {
@@ -28,18 +26,16 @@ function App() {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
-        //   let name = user.displayName
-        const profilePics = user.photoURL
-        setImage(profilePics)
-        console.log(user.photoURL)
-        console.log(user.displayName)
-        setName(user)
+      
+        localStorage.setItem("userData", user.displayName)
+        localStorage.setItem("userImg", user.photoURL)
 
         // ...
       }).catch((error) => {
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
+        
         // The email of the user's account used.
         const email = error.customData.email;
         // The AuthCredential type that was used.
@@ -77,8 +73,8 @@ function App() {
           <div className='banner'>
             <h2 >Userxiffy</h2>
             <div className='emailId'>
-              <p> Hi, {name.displayName} </p>
-              <img src={image} alt="img" />
+              <p> Hi, {localStorage.getItem("userData")} </p>
+              <img src={localStorage.getItem("userImg")} alt="img" />
             </div>
 
 
