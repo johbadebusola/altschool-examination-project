@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { useNavigate } from 'react-router-dom'
 import img2 from "./img2.svg"
 import img3 from "./img3.svg"
@@ -17,6 +18,11 @@ navigate("/errorboundry")
 }
   return (
     <>
+    <Helmet>
+      <meta charSet='utf-8' />
+      <meta name='description' content=' Home page for userxiffy app' />
+      <title> userxiffy Homepage  </title>
+    </Helmet>
 <button className='errorTest' onClick={test} > Click to test Error boundry </button>
       <p className='home-head'> Click on the user tab to view the list of people who use our service.</p>
       <div className='home-img'>

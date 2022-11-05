@@ -1,5 +1,6 @@
 import React from 'react'
 import ErrorBoundry from './ErrorBoundry';
+import Helmet from 'react-helmet';
 import "./index.css"
 function Userdata({data,loading,error}) {
 
@@ -24,6 +25,11 @@ function Userdata({data,loading,error}) {
   ))
   return (
     <>
+      <Helmet>
+      <meta charSet='utf-8' />
+      <meta name='description' content=' user page that displays random users from randomuser.me api.' />
+      <title> userxiffy UserPage</title>
+    </Helmet>
 
     {
      

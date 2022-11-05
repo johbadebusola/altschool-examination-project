@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Userdata from "./Userdata";
 import "./index.css"
 import { Pagination } from "antd";
-import ErrorBoundary from "./ErrorBoundry";
+
 const User = () => {
     const [data, setData] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
