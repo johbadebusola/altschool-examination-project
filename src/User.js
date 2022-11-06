@@ -53,7 +53,7 @@ const User = () => {
           
            <Userdata data={currentPost} loading={loading} error ={error} />
             <div className="pagination">
-            <Pagination current={currentPage} onChange={(value) =>setCurrentPage(value) } total={data.length} itemRender={itemRender}  />
+            <Pagination current={currentPage} onChange={(value) =>setCurrentPage(value) } total={data.length} itemRender={itemRender} pageSize={postPerPage} />
             </div>
           
         
