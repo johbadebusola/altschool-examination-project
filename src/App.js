@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes, Link, useNavigate } from 'react-router-dom';
 import { signOutOfGoogle, auth } from "./firebase"
 import './App.css';
 import TestErrorBoundry from './TestErrorBoundry';
@@ -9,15 +9,20 @@ import "./index.css"
 import back1 from "./back1.svg"
 import googleIcon from "./googleicon.png"
 import logout from "./logout.png"
+import Signup from './Signup';
+import Login from './Signin';
 import Homes from "./Home.png"
 import User from './User'
 import Home from './Home'
+import Nav from './Routes';
 import ErrorPage from './ErrorPage'
 import "./index.css"
 
 
 function App() {
   const [signedIn, setSignedIn] = useState(true)
+  const [redirect,setRedirect] = useState(false)
+  // const navigate = useNavigate()
   const signIn = () => {
     signInWithGoogle()
       .then((result) => {
@@ -26,7 +31,7 @@ function App() {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
-      
+
         localStorage.setItem("userData", user.displayName)
         localStorage.setItem("userImg", user.photoURL)
 
@@ -35,7 +40,7 @@ function App() {
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
-        
+
         // The email of the user's account used.
         const email = error.customData.email;
         // The AuthCredential type that was used.
@@ -48,21 +53,33 @@ function App() {
 
   const signOut = () => {
     signOutOfGoogle()
+   
       .then(() => {
         console.log("sign out successful")
+      setRedirect(true)
+    
         // Sign-out successful.
       }).catch((error) => {
         // An error happened.
       });
-
+     
   }
 
+  if(redirect){
+   
+  }
+
+ 
 
   auth.onAuthStateChanged(user => {
     if (user) {
-      return setSignedIn(true);
+      console.log(user)
+
+      setSignedIn(true);
+    } else {
+      setSignedIn(false)
     }
-    setSignedIn(false)
+
   })
   if (signedIn === true) {
 
@@ -87,7 +104,7 @@ function App() {
               <li> <Link to="/"><img className='nav-img' src={Homes} alt="logout" /></Link> </li>
               <li className='user'>  <Link to="user" > USER </Link> </li>
               <li onClick={signOut}>
-                <a href='#'>  <img className='nav-img' src={logout} alt="logout" /> </a>
+               <img className='nav-img' src={logout} alt="logout" /> 
               </li>
             </ul>
           </nav>
@@ -104,6 +121,8 @@ function App() {
     )
   } else {
 
+    
+
     return (
       < >
         <ErrorBoundary>
@@ -117,6 +136,10 @@ function App() {
             <div className='signin-grid2'>
 
               <h3> WELCOME </h3>
+              <div>
+                <Nav />
+              
+              </div>
               <p> To keep connected with us please sign in with google</p>
               <button className='signInButton' onClick={signIn} >
                 <img src={googleIcon} alt="google" /> --

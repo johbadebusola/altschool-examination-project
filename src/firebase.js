@@ -32,6 +32,7 @@ const signOutOfGoogle = () => signOut(auth)
 
 export {
   auth,
+  app,
   signInWithGoogle,
   signOutOfGoogle,
   GoogleAuthProvider

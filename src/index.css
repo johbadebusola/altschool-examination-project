@@ -438,3 +438,92 @@
   border: 2px solid rebeccapurple;
   font-weight: bold;
 }
+
+/* SIGNUP */
+.body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+
+}
+
+.container {
+  width: 100%;
+  flex-direction: column;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
+.errorMessages {
+  color: red;
+  font-family: 'Carter One', cursive;
+}
+
+.login {
+
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  padding: 2em;
+
+
+}
+
+.login>input {
+  padding: 7px;
+  margin-bottom: 0.5em;
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid black;
+  font-family: 'Carter One', cursive;
+}
+
+.login>h3 {
+  color: black;
+  font-family: 'Carter One', cursive;
+}
+
+.login>.p1 {
+  margin-bottom: 1em;
+  text-align: left;
+  font-family: 'Carter One', cursive;
+}
+
+.login>.p3 {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  background-color: white;
+  margin: -1.5em auto;
+  margin-bottom: 0.5em;
+  width: 80px;
+
+}
+
+.login>.p2 {
+  font-family: 'Carter One', cursive;
+}
+
+.login>button {
+  border: 1px solid black;
+  border-radius: 7px;
+  background: #004182;
+  color: white;
+  font-weight: bold;
+  padding: 8px;
+  width: 100%;
+  margin-bottom: 1em;
+  font-family: 'Carter One', cursive;
+}
+
+.login>button:hover {
+  background-color: white;
+  color: #004182;
+}
