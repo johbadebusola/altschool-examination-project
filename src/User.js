@@ -5,11 +5,10 @@ import { Pagination } from "antd";
 
 const User = () => {
     const [data, setData] = useState([])
-    const [currentPage, setCurrentPage] = useState(1)
-    const [postPerPage] = useState(10)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState("")
-   
+    const [currentPage, setCurrentPage] = useState(1)
+    const [postPerPage] = useState(10)
 
     async function getData() {
 

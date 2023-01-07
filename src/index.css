@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Roboto+Slab&display=swap');
 .nav ul {
   list-style: none;
   padding: 0;
@@ -321,6 +321,11 @@
 }
 
 @media (min-width:600px) {
+
+  .all{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+  }
   .signin-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

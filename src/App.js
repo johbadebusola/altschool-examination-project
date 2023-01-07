@@ -9,8 +9,6 @@ import "./index.css"
 import back1 from "./back1.svg"
 import googleIcon from "./googleicon.png"
 import logout from "./logout.png"
-import Signup from './Signup';
-import Login from './Signin';
 import Homes from "./Home.png"
 import User from './User'
 import Home from './Home'
@@ -20,9 +18,8 @@ import "./index.css"
 
 
 function App() {
-  const [signedIn, setSignedIn] = useState(true)
-  const [redirect,setRedirect] = useState(false)
-  // const navigate = useNavigate()
+  const [signedIn, setSignedIn] = useState(false)
+ 
   const signIn = () => {
     signInWithGoogle()
       .then((result) => {
@@ -31,10 +28,8 @@ function App() {
         const token = credential.accessToken;
         // The signed-in user info.
         const user = result.user;
-
         localStorage.setItem("userData", user.displayName)
         localStorage.setItem("userImg", user.photoURL)
-
         // ...
       }).catch((error) => {
         // Handle Errors here.
@@ -56,7 +51,7 @@ function App() {
    
       .then(() => {
         console.log("sign out successful")
-      setRedirect(true)
+     
     
         // Sign-out successful.
       }).catch((error) => {
@@ -65,9 +60,6 @@ function App() {
      
   }
 
-  if(redirect){
-   
-  }
 
  
 
@@ -104,7 +96,10 @@ function App() {
               <li> <Link to="/"><img className='nav-img' src={Homes} alt="logout" /></Link> </li>
               <li className='user'>  <Link to="user" > USER </Link> </li>
               <li onClick={signOut}>
-               <img className='nav-img' src={logout} alt="logout" /> 
+                <a href='#'>
+                <img className='nav-img' src={logout} alt="logout" /> 
+                </a>
+              
               </li>
             </ul>
           </nav>
